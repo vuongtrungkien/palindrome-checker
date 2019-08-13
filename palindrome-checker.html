@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+<script>
+    let str = prompt("enter the string");
+
+    function checkString(str) {
+        let array = new Array(str.split(""));
+        let array2 = array[0];
+        let lastElement = array2.length - 1;
+        for (let i = 0; i < lastElement / 2; i++) {
+            if (array2[i] !== array2[lastElement - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    alert(checkString(str));
+</script>
+</body>
+</html>
